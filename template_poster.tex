@@ -1,0 +1,236 @@
+\documentclass[paperwidth=76in, paperheight=46in, landscape, margin=5cm, fontscale = 0.215]{baposter}
+\usepackage{color, soul}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\setulcolor{cyan}
+
+\usepackage{blindtext}
+\usepackage[none]{hyphenat}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{relsize} % Used for making text smaller in some places
+\usepackage{fancybox}
+%% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{eufrak}
+\usepackage{layout}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{array}
+
+%% Algorithms
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+%% Font
+\usepackage{cmbright} % Sans serif in text
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Border color of content boxes
+\definecolor{bordercol}{RGB}{255,255,255}
+
+% Background color for the header in the content boxes (left side)
+\definecolor{headercol1}{RGB}{255,255,255}
+
+% Background color for the header in the content boxes (right side)
+\definecolor{headercol2}{RGB}{255,255,255}
+
+% Text color for the header text in the content boxes
+\definecolor{headerfontcol}{RGB}{232,170,12}
+
+% Background color for the content in the content boxes
+\definecolor{boxcolor}{RGB}{255,255,255}
+
+\definecolor{col4}{RGB}{116,0,64}
+
+\definecolor{col1}{RGB}{223,84,84}
+
+\definecolor{col3}{RGB}{251,158,63}
+
+\definecolor{col2}{RGB}{142,216,184}
+
+
+\background{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{poster}{
+grid=false,
+columns=4,
+eyecatcher=true,
+colspacing=1cm,
+borderColor=bordercol, % Border color of content boxes
+headerColorOne=headercol1, % Background color for the header in the content boxes (left side)
+headerColorTwo=headercol2, % Background color for the header in the content boxes (right side)
+headerFontColor=headerfontcol, % Text color for the header text in the content boxes
+boxColorOne=boxcolor, % Background color for the content in the content boxes
+headerfont=\Large, % Font modifiers for the text in the content box headers
+textborder=rectangle,
+background=user,
+headerborder=open, % Change to closed for a line under the content box headers
+boxshade=plain}%
+{%
+ \parbox[c]{0.2\textwidth}{%
+%\hspace{1em}
+
+%\hspace{0em}
+\includegraphics[height=0.08\textheight]{example-image}
+\hspace{30pt}
+\includegraphics[height=0.08\textheight]{example-image}
+
+}
+
+}
+% Title
+{\huge \color{headerfontcol} Your Paper Title} 
+% Authors and email
+% Authors and email
+{ Author1, Author2, Author3, Author 4\\
+{ \footnotesize{Hardware University}} }%
+ {\parbox[t]{0.18\textwidth}{% 
+
+\raisebox{-0.0cm}{
+\centering
+\includegraphics[height=0.08\textheight]{example-image}}
+\hspace{30pt}
+\includegraphics[height=0.08\textheight]{example-image}
+}}
+
+\newcommand{\highlight}[1]{%
+  \colorbox{red!50}{$\displaystyle#1$}}
+
+\newcommand{\X}{\mathbf{x}}
+\newcommand{\Y}{\mathbf{y}}
+\newcommand{\W}{\mathbf{w}}
+\newcommand{\pmdl}{p_{\theta}}
+\newcommand{\grad}{\nabla_{\X}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\f}[1]{\boldsymbol{#1}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\std}[1]{\tiny{$\pm$ #1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\headerbox{}{name=intro,column=0,row=0,span=1}{
+\vspace{1.5cm}
+\begin{tcolorbox}
+  
+Write the main message or the motivation here. Use \underline{underlines} to emphasize key terms. Place your key figure below:
+
+{\begin{minipage}{\textwidth}
+  \vspace{0.5cm}
+  \centering
+  \begin{minipage}{0.4\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{example-image}
+    {\footnotesize{Caption 1}}
+    \label{fig:figure1}
+  \end{minipage}%
+  \hspace{0.1cm}
+  \begin{minipage}{0.4\textwidth}
+    \centering 
+    \includegraphics[width=\linewidth]{example-image} 
+    {\footnotesize{Caption 2}} 
+    \label{fig:figure2} 
+  \end{minipage}
+  \end{minipage}}
+
+\vspace{1cm}
+\textbf{Research Question:} How to create a good poster? 
+
+\vspace{1cm}
+\textbf{Proposed Approach:}
+\begin{itemize}
+  \item Mention key takeaways clearly in this box
+  \item Don't fill the poster with lots of dense text and equations, except when it is a template (such as this one). Be sure to add lots of pictures
+  \item Have fun with the design, and make it your own!
+\end{itemize} 
+
+\end{tcolorbox}
+}
+
+
+\headerbox{Section Header}{name=sec1,column=1,row=0,span=1}{
+
+\blindtext
+
+\begin{tcolorbox}
+  \vspace*{-10pt}
+  \begin{align*}  
+  Speed = \frac{distance}{time} {\rightarrow \text{not time} \atop \rightarrow \text{not distance}}
+  \end{align*}
+\end{tcolorbox}
+
+}
+
+	
+\headerbox{Section Header}{name=sec2,column=1,span=1, below=sec1}{
+
+\blindtext
+
+}	
+
+
+\headerbox{Section Header}{name=sec3,column=2,row=0,span=1}{
+
+\blindtext
+
+
+}
+
+
+\headerbox{Section Header}{name=sec4, column=2,span=1, below = sec3}{
+
+\blindtext
+
+}
+
+\headerbox{Section Header}{name=sec5,column=3,row=0,span=1}{
+
+\blindtext
+
+}
+
+\headerbox{Section Header}{name=sec6,column=3,span=1,below=sec5}{
+
+\blindtext
+
+}
+
+
+
+\headerbox{References}{name=ack,column=3,span=1, below=sec6}{
+
+[1] Reference 1
+
+[2] Reference 2
+
+[3] Reference 3
+}	
+	
+\end{poster}
+
+
+
+\end{document}
+
+
+
+
