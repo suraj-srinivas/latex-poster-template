@@ -1,3 +1,5 @@
+%% Author: Suraj Srinivas
+
 \documentclass[paperwidth=76in, paperheight=46in, landscape, margin=5cm, fontscale = 0.215]{baposter}
 \usepackage{color, soul}
 \definecolor{darkblue}{rgb}{0,0,0.5}
@@ -84,10 +86,8 @@ headerborder=open, % Change to closed for a line under the content box headers
 boxshade=plain}%
 {%
  \parbox[c]{0.2\textwidth}{%
-%\hspace{1em}
-
-%\hspace{0em}
-\includegraphics[height=0.08\textheight]{example-image}
+\hspace{10pt}
+ \includegraphics[height=0.08\textheight]{example-image}
 \hspace{30pt}
 \includegraphics[height=0.08\textheight]{example-image}
 
@@ -102,7 +102,8 @@ boxshade=plain}%
 { \footnotesize{Hardware University}} }%
  {\parbox[t]{0.18\textwidth}{% 
 
-\raisebox{-0.0cm}{
+\raisebox{0cm}{
+\hspace{20pt}
 \centering
 \includegraphics[height=0.08\textheight]{example-image}}
 \hspace{30pt}
@@ -137,19 +138,9 @@ Write the main message or the motivation here. Use \underline{underlines} to emp
 {\begin{minipage}{\textwidth}
   \vspace{0.5cm}
   \centering
-  \begin{minipage}{0.4\textwidth}
-    \centering
-    \includegraphics[width=\linewidth]{example-image}
-    {\footnotesize{Caption 1}}
+    \includegraphics[width=0.65\linewidth]{example-image}
+    {\\\footnotesize{Main Image Highlighting the method}}
     \label{fig:figure1}
-  \end{minipage}%
-  \hspace{0.1cm}
-  \begin{minipage}{0.4\textwidth}
-    \centering 
-    \includegraphics[width=\linewidth]{example-image} 
-    {\footnotesize{Caption 2}} 
-    \label{fig:figure2} 
-  \end{minipage}
   \end{minipage}}
 
 \vspace{1cm}
@@ -158,9 +149,9 @@ Write the main message or the motivation here. Use \underline{underlines} to emp
 \vspace{1cm}
 \textbf{Proposed Approach:}
 \begin{itemize}
-  \item Mention key takeaways clearly in this box
-  \item Don't fill the poster with lots of dense text and equations, except when it is a template (such as this one). Be sure to add lots of pictures
-  \item Have fun with the design, and make it your own!
+  \item Mention key takeaways in this box.
+  \item Add graphics / graphs / plots generously. Avoid filling the poster with dense text and equations.
+  \item Have fun with the design!
 \end{itemize} 
 
 \end{tcolorbox}
